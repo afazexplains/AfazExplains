@@ -1,0 +1,7 @@
+{
+  "name": "afaz-explains-homepage",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Single-page responsive website for Afaz Explains with Pages CMS editable content.",
+  "scripts": { "build": "node build.mjs" }
+}

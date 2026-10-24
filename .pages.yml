@@ -1,0 +1,225 @@
+# Afaz Explains — Pages CMS configuration.
+# The form at https://app.pagescms.org edits content/homepage.json.
+media:
+  input: public/media
+  output: /media
+  rename: safe
+  categories: [image]
+content:
+  - name: homepage
+    label: Homepage
+    type: file
+    path: content/homepage.json
+    format: json
+    fields:
+      - name: settings
+        label: Website & search settings
+        type: object
+        fields:
+          - name: page_title
+            label: Browser tab title
+            type: string
+          - name: meta_description
+            label: Search description
+            type: text
+          - name: allow_search_engines
+            label: Allow search engines to index this website
+            type: boolean
+            description: Keep switched off until your contact details and booking link are ready.
+      - name: brand
+        label: Business name & strapline
+        type: object
+        fields:
+          - name: first_word
+            label: First word of brand
+            type: string
+          - name: second_word
+            label: Gold word of brand
+            type: string
+          - name: tagline
+            label: Tagline beneath logo
+            type: string
+      - name: hero
+        label: Top banner
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small gold introductory line
+            type: string
+          - name: line_one
+            label: Main heading — line 1
+            type: string
+          - name: line_two
+            label: Main heading — line 2
+            type: string
+          - name: line_three
+            label: Main heading — gold line
+            type: string
+          - name: description
+            label: Banner description
+            type: text
+          - name: primary_button
+            label: Main button text
+            type: string
+          - name: secondary_button
+            label: Secondary button text
+            type: string
+          - name: image
+            label: Banner photograph
+            type: image
+          - name: image_alt
+            label: Banner image description (accessibility)
+            type: string
+      - name: services
+        label: Service cards
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small section label
+            type: string
+          - name: heading
+            label: Section heading
+            type: string
+          - name: description
+            label: Section introduction
+            type: text
+          - name: link_label
+            label: Intro link wording
+            type: string
+          - name: cards
+            label: Service cards
+            type: object
+            list:
+              min: 1
+              max: 6
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Service name
+                type: string
+              - name: description
+                label: Service description
+                type: text
+              - name: icon
+                label: Card icon
+                type: select
+                options:
+                  values: [people, document, search, scale, shield, chat]
+              - name: link_label
+                label: Link accessibility description
+                type: string
+      - name: highlights
+        label: Four trust highlights
+        type: object
+        list:
+          min: 1
+          max: 6
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: icon
+            label: Icon
+            type: select
+            options:
+              values: [shield, people, scale, document, search, chat]
+          - name: title
+            label: Highlight title
+            type: string
+          - name: description
+            label: Short explanation
+            type: text
+      - name: about
+        label: About section
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small section label
+            type: string
+          - name: heading
+            label: Heading
+            type: string
+          - name: description
+            label: Main paragraph
+            type: text
+          - name: point_one
+            label: Point 1
+            type: string
+          - name: point_two
+            label: Point 2
+            type: string
+          - name: point_three
+            label: Point 3
+            type: string
+          - name: button_label
+            label: Button wording
+            type: string
+          - name: image
+            label: About image
+            type: image
+          - name: image_alt
+            label: About image description (accessibility)
+            type: string
+      - name: statement
+        label: Editorial statement (not a testimonial)
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small section label
+            type: string
+          - name: heading
+            label: Statement heading
+            type: string
+          - name: quote
+            label: Statement text
+            type: text
+          - name: attribution
+            label: Statement caption
+            type: string
+      - name: contact
+        label: Booking & contact
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small section label
+            type: string
+          - name: heading
+            label: Contact heading
+            type: string
+          - name: description
+            label: Contact description
+            type: text
+          - name: primary_button
+            label: Booking button wording
+            type: string
+          - name: email_button
+            label: Email button wording
+            type: string
+          - name: booking_url
+            label: Online booking URL (https://...)
+            type: string
+            description: Leave blank if bookings are not set up yet. The website will link to this address when added.
+          - name: email
+            label: Public contact email
+            type: string
+          - name: phone
+            label: Public contact telephone number
+            type: string
+      - name: footer
+        label: Bottom footer
+        type: object
+        fields:
+          - name: tagline
+            label: Brand strapline
+            type: string
+          - name: contact_heading
+            label: Footer contact heading
+            type: string
+          - name: contact_description
+            label: Footer contact text
+            type: text
+          - name: legal_note
+            label: Copyright wording
+            type: string

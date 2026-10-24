@@ -1,0 +1,104 @@
+{
+  "settings": {
+    "page_title": "Afaz Explains | Clear Employment & Workplace Guidance",
+    "meta_description": "Straightforward support with workplace grievances, disciplinaries, investigations and employment-related concerns.",
+    "allow_search_engines": false
+  },
+  "brand": {
+    "first_word": "Afaz",
+    "second_word": "Explains",
+    "tagline": "WORKPLACE MATTERS, MADE CLEAR."
+  },
+  "hero": {
+    "eyebrow": "EMPLOYMENT ADVICE & WORKPLACE SUPPORT",
+    "line_one": "Practical advice.",
+    "line_two": "Confident decisions.",
+    "line_three": "A clearer way forward.",
+    "description": "Clear, practical support when workplace issues become difficult. Understand the process, prepare for what comes next and make informed decisions with confidence.",
+    "primary_button": "Book a Consultation",
+    "secondary_button": "Explore my services",
+    "image": "/media/hero-consultation.webp",
+    "image_alt": "A professional workplace consultation in a warm, private office"
+  },
+  "services": {
+    "eyebrow": "HOW AFAZ EXPLAINS CAN HELP",
+    "heading": "Support for complex workplace matters.",
+    "description": "When work becomes complicated, you deserve explanations you can understand and practical support you can act on.",
+    "link_label": "Discuss your situation",
+    "cards": [
+      {
+        "title": "Grievances",
+        "description": "Support with raising or responding to workplace grievances, organising your evidence and preparing your next steps.",
+        "icon": "people",
+        "link_label": "Enquire about grievances"
+      },
+      {
+        "title": "Disciplinaries & Appeals",
+        "description": "Understand the process, prepare for formal meetings and approach disciplinary outcomes or appeals with clarity.",
+        "icon": "document",
+        "link_label": "Explore disciplinary support"
+      },
+      {
+        "title": "Workplace Investigations",
+        "description": "Guidance on investigation meetings, allegations, evidence and the procedures you may be facing at work.",
+        "icon": "search",
+        "link_label": "Explore investigation support"
+      }
+    ]
+  },
+  "highlights": [
+    {
+      "icon": "shield",
+      "title": "Plain-English guidance",
+      "description": "Complex workplace processes explained clearly."
+    },
+    {
+      "icon": "people",
+      "title": "A personal approach",
+      "description": "Advice shaped around your circumstances."
+    },
+    {
+      "icon": "scale",
+      "title": "Practical next steps",
+      "description": "Know your options before making decisions."
+    },
+    {
+      "icon": "document",
+      "title": "Case-focused support",
+      "description": "Help preparing information and documents."
+    }
+  ],
+  "about": {
+    "eyebrow": "ABOUT AFAZ EXPLAINS",
+    "heading": "Clear explanations. Support that makes sense.",
+    "description": "Afaz Explains helps people navigate difficult workplace situations with practical, straightforward guidance. Whether you're preparing for a meeting, reviewing correspondence or considering your options, the aim is to help you feel informed and ready for the next step.",
+    "point_one": "An individual, considered approach",
+    "point_two": "Straightforward explanations",
+    "point_three": "Focused on your next steps",
+    "button_label": "See how I can help",
+    "image": "/media/about-office.webp",
+    "image_alt": "A calm, private meeting room with dark navy interiors"
+  },
+  "statement": {
+    "eyebrow": "THE AFAZ EXPLAINS APPROACH",
+    "heading": "Clarity makes a difference.",
+    "quote": "You should be able to understand what's happening at work, what your options are and how to prepare for what comes next.",
+    "attribution": "Our approach to workplace support"
+  },
+  "contact": {
+    "eyebrow": "YOUR NEXT STEP",
+    "heading": "Let's make your situation clearer.",
+    "description": "Whether you need a one-off consultation or more involved support, get in touch to discuss how Afaz Explains may be able to help.",
+    "primary_button": "Book a Consultation",
+    "email_button": "Send an Email",
+    "booking_url": "",
+    "email": "",
+    "phone": ""
+  },
+  "footer": {
+    "tagline": "Workplace matters, made clear.",
+    "contact_heading": "Get in touch",
+    "contact_description": "Questions about a workplace issue? Start a conversation.",
+    "legal_note": "Afaz Explains. All rights reserved."
+  }
+}
