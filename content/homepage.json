@@ -10,6 +10,12 @@
     "second_word": "Explains",
     "tagline": "WORKPLACE MATTERS, MADE CLEAR."
   },
+  "navigation": [
+    { "label": "The Approach", "href": "#approach" },
+    { "label": "The Services", "href": "#services" },
+    { "label": "The Journey", "href": "/journey/" },
+    { "label": "How to Contact", "href": "#contact" }
+  ],
   "hero": {
     "eyebrow": "EMPLOYMENT ADVICE & WORKPLACE SUPPORT",
     "line_one": "Practical advice.",
