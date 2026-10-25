@@ -1,7 +1,6 @@
-
 {
   "settings": {
-    "page_title": "Afaz Explains | Clear Employment & Workplace Guidance",
+    "page_title": "Afaz Explains | WORKPLACE MATTERS, MADE CLEAR.",
     "meta_description": "Straightforward support with workplace grievances, disciplinaries, investigations and employment-related concerns.",
     "allow_search_engines": false
   },
@@ -11,10 +10,22 @@
     "tagline": "WORKPLACE MATTERS, MADE CLEAR."
   },
   "navigation": [
-    { "label": "The Approach", "href": "#approach" },
-    { "label": "The Services", "href": "#services" },
-    { "label": "The Journey", "href": "/journey/" },
-    { "label": "How to Contact", "href": "#contact" }
+    {
+      "label": "The Approach",
+      "href": "#approach"
+    },
+    {
+      "label": "The Services",
+      "href": "#services"
+    },
+    {
+      "label": "The Journey",
+      "href": "/journey/"
+    },
+    {
+      "label": "How to Contact",
+      "href": "#contact"
+    }
   ],
   "hero": {
     "eyebrow": "EMPLOYMENT ADVICE & WORKPLACE SUPPORT",
@@ -97,10 +108,7 @@
     "heading": "Let's make your situation clearer.",
     "description": "Whether you need a one-off consultation or more involved support, get in touch to discuss how Afaz Explains may be able to help.",
     "primary_button": "Book a Consultation",
-    "email_button": "Send an Email",
-    "booking_url": "",
-    "email": "",
-    "phone": ""
+    "email_button": "Send an Email"
   },
   "footer": {
     "tagline": "Workplace matters, made clear.",
