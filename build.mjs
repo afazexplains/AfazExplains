@@ -52,6 +52,21 @@ const icons = {
 function icon(key, extraClass = '') {
   return `<svg class="icon ${extraClass}" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${icons[key] || icons.document}</svg>`;
 }
+const defaultNavigation = [
+  { label: 'The Approach', href: '#approach' },
+  { label: 'The Services', href: '#services' },
+  { label: 'The Journey', href: '/journey/' },
+  { label: 'How to Contact', href: '#contact' }
+];
+const navigation = Array.isArray(content.navigation) ? content.navigation : defaultNavigation;
+function navLink(item) {
+  const label = String(item?.label ?? '').trim();
+  const target = String(item?.href ?? '').trim();
+  const allowed = /^#[A-Za-z0-9_-]+$/.test(target) || (target.startsWith('/') && !target.startsWith('//') && !/\s/.test(target));
+  return label ? `<a href="${esc(allowed ? target : '#contact')}">${esc(label)}</a>` : '';
+}
+const desktopNavigation = navigation.map(navLink).join('\n        ');
+const mobileNavigation = navigation.map(navLink).join('');
 const serviceMarkup = (content.services.cards || []).map((card, index) => `
   <article class="service-card" style="--card-order:${index}">
     <div class="service-icon" aria-hidden="true">${icon(card.icon)}</div>
@@ -92,20 +107,15 @@ const html = `<!doctype html>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="top-frame">
-  <header class="site-header" id="top">
+<header class="site-header" id="top">
     <div class="container header-grid">
-      <a class="brand" href="#top" aria-label="Afaz Explains homepage">
+      <a class="brand" href="/" aria-label="Afaz Explains homepage">
         <span class="brand-title">${str(content.brand,'first_word')} <em>${str(content.brand,'second_word')}</em></span>
         <span class="brand-rule"></span>
         <span class="brand-tagline">${str(content.brand,'tagline')}</span>
       </a>
       <nav class="desktop-nav" aria-label="Main navigation">
-        <a class="active" href="#top">Home</a>
-        <a href="#services">Our Services</a>
-        <a href="#about">About</a>
-        <a href="#approach">Our Approach</a>
-        <a href="#contact">Contact</a>
+        ${desktopNavigation}
       </nav>
       <div class="header-right">
         <a class="button button-gold header-book" href="${hrefForBooking}"${externalProps}>${str(content.hero,'primary_button')}${icon('arrow')}</a>
@@ -113,10 +123,11 @@ const html = `<!doctype html>
       </div>
     </div>
     <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
-      <a href="#top">Home</a><a href="#services">Our Services</a><a href="#about">About</a><a href="#approach">Our Approach</a><a href="#contact">Contact</a>
+      ${mobileNavigation}
       <a class="mobile-book" href="${hrefForBooking}"${externalProps}>${str(content.hero,'primary_button')}${icon('arrow')}</a>
     </nav>
   </header>
+<div class="top-frame">
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero-photo"><img src="${url(content.hero.image, '/media/hero-consultation.webp')}" alt="${str(content.hero,'image_alt')}" fetchpriority="high" width="1224" height="722"></div>
     <div class="hero-overlay" aria-hidden="true"></div>
@@ -166,7 +177,7 @@ const html = `<!doctype html>
 </main>
 <footer class="site-footer">
   <div class="container footer-layout">
-    <div class="footer-about"><a class="brand footer-brand" href="#top"><span class="brand-title">${str(content.brand,'first_word')} <em>${str(content.brand,'second_word')}</em></span><span class="brand-rule"></span></a><p>${str(content.footer,'tagline')}</p></div>
+    <div class="footer-about"><a class="brand footer-brand" href="/"><span class="brand-title">${str(content.brand,'first_word')} <em>${str(content.brand,'second_word')}</em></span><span class="brand-rule"></span></a><p>${str(content.footer,'tagline')}</p></div>
     <nav class="footer-links" aria-label="Footer navigation"><h3>Quick links</h3><a href="#top">Home</a><a href="#services">Our Services</a><a href="#about">About</a><a href="#approach">Our Approach</a><a href="#contact">Contact</a></nav>
     <div class="footer-services"><h3>How I can help</h3>${(content.services.cards || []).slice(0,4).map(card=>`<a href="#services">${str(card,'title')}</a>`).join('')}</div>
     <div class="footer-contact"><h3>${str(content.footer,'contact_heading')}</h3><p>${str(content.footer,'contact_description')}</p>${hasEmail ? `<a class="footer-email" href="${emailHref}">${esc(email)}</a>` : `<a class="footer-email" href="#contact">Consultation enquiries</a>`}</div>
