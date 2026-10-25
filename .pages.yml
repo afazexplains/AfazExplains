@@ -39,6 +39,23 @@ content:
           - name: tagline
             label: Tagline beneath logo
             type: string
+      - name: navigation
+        label: Top navigation tabs
+        type: object
+        list:
+          min: 1
+          max: 8
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+        fields:
+          - name: label
+            label: Tab name
+            type: string
+          - name: href
+            label: Link destination
+            type: string
+            description: "Examples — #approach, #services, #contact, or /journey/ for a page."
       - name: hero
         label: Top banner
         type: object
