@@ -10,6 +10,8 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}button{fon
 .section-anchor{scroll-margin-top:114px}
 .top-frame{position:relative;background:var(--navy);color:#fff;overflow:hidden}
 .site-header{position:sticky;top:0;z-index:1000;height:98px;background:var(--header-bg);color:var(--navy)}
+/* Keep desktop navigation fixed; reserve its original height in the page flow. */
+@media(min-width:1024px){body{padding-top:98px}.site-header{position:fixed;top:0;left:0;right:0}}
 .header-grid{height:100%;display:grid;grid-template-columns:285px 1fr auto;align-items:center;gap:26px}
 .brand{display:inline-flex;flex-direction:column;align-items:flex-start;width:max-content;max-width:100%}
 .brand-title{font:500 clamp(25px,2.6vw,34px)/1.1 var(--display);letter-spacing:-.055em;color:#fff;white-space:nowrap}
