@@ -11,20 +11,12 @@
   },
   "navigation": [
     {
-      "label": "The Approach",
-      "href": "#approach"
-    },
-    {
-      "label": "The Services",
+      "label": "Services",
       "href": "#services"
     },
     {
-      "label": "The Journey",
-      "href": "/journey/"
-    },
-    {
-      "label": "How to Contact",
-      "href": "#contact"
+      "label": "Blog & Socials",
+      "href": "/blog"
     }
   ],
   "hero": {
