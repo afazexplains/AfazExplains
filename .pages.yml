@@ -72,9 +72,12 @@ content:
           - name: line_three
             label: Main heading — gold line
             type: string
-          - name: description
-            label: Banner description
-            type: text
+          - name: offer_price
+            label: Starting price (e.g. From £25)
+            type: string
+          - name: offer_session_length
+            label: Session length (e.g. 30-minute consultations available)
+            type: string
           - name: primary_button
             label: Main button text
             type: string
