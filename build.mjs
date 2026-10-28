@@ -132,7 +132,7 @@ const html = `<!doctype html>
     <div class="hero-photo"><img src="${url(content.hero.image, '/media/hero-consultation.webp')}" alt="${str(content.hero,'image_alt')}" fetchpriority="high" width="1224" height="722"></div>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="container hero-layout"><div class="hero-copy">
-      <p class="eyebrow gold-ink">${str(content.hero,'eyebrow')}</p>
+      ${String(content.hero?.eyebrow ?? '').trim() ? `<p class="eyebrow gold-ink">${str(content.hero,'eyebrow')}</p>` : ''}
       <h1 id="hero-title">${str(content.hero,'line_one')}<br>${str(content.hero,'line_two')}<br><span>${str(content.hero,'line_three')}</span></h1>
       <p class="hero-subtitle">${text(content.hero.description)}</p>
       <div class="hero-actions">${bookingCta}<a class="text-link light-link" href="#services">${str(content.hero,'secondary_button')} ${icon('arrowdiag')}</a></div>
