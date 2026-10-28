@@ -132,7 +132,7 @@ const html = `<!doctype html>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="container hero-layout"><div class="hero-copy">
       ${String(content.hero?.eyebrow ?? '').trim() ? `<p class="eyebrow gold-ink">${str(content.hero,'eyebrow')}</p>` : ''}
-      <h1 id="hero-title">${str(content.hero,'line_one')}<br>${str(content.hero,'line_two')}</h1>
+      <h1 id="hero-title">${str(content.hero,'line_one')}<br><span>${str(content.hero,'line_two')}</span></h1>
       <p class="hero-offer">Workplace consultations ${esc(offerPrice)} <span aria-hidden="true">·</span> ${str(content.hero,'offer_session_length')}</p>
       <div class="hero-actions">${bookingCta}</div>
     </div></div>
