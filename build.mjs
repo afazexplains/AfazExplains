@@ -134,7 +134,7 @@ const html = `<!doctype html>
     <div class="container hero-layout"><div class="hero-copy">
       ${String(content.hero?.eyebrow ?? '').trim() ? `<p class="eyebrow gold-ink">${str(content.hero,'eyebrow')}</p>` : ''}
       <h1 id="hero-title">${str(content.hero,'line_one')}<br>${str(content.hero,'line_two')}<br><span>${str(content.hero,'line_three')}</span></h1>
-      <p class="hero-subtitle">${text(content.hero.description)}</p>
+      <div class="hero-offer"><p class="hero-offer-price">${str(content.hero,'offer_price')}</p><p class="hero-offer-duration">${str(content.hero,'offer_session_length')}</p></div>
       <div class="hero-actions">${bookingCta}<a class="text-link light-link" href="#services">${str(content.hero,'secondary_button')} ${icon('arrowdiag')}</a></div>
       <div class="hero-bottom-line"><span class="gold-dot"></span> EXPLAINED CLEARLY. HANDLED CONFIDENTLY.</div>
     </div></div>
