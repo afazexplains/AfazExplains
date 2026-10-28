@@ -117,13 +117,13 @@ const html = `<!doctype html>
         ${desktopNavigation}
       </nav>
       <div class="header-right">
-        <a class="button button-gold header-book" href="${hrefForBooking}"${externalProps}>${str(content.hero,'primary_button')}${icon('arrow')}</a>
+        <a class="button button-gold header-book" href="${hrefForBooking}"${externalProps}>${str(content.contact,'primary_button')}${icon('arrow')}</a>
         <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">${icon('menu')}</button>
       </div>
     </div>
     <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
       ${mobileNavigation}
-      <a class="mobile-book" href="${hrefForBooking}"${externalProps}>${str(content.hero,'primary_button')}${icon('arrow')}</a>
+      <a class="mobile-book" href="${hrefForBooking}"${externalProps}>${str(content.contact,'primary_button')}${icon('arrow')}</a>
     </nav>
   </header>
 <div class="top-frame">
