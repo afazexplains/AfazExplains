@@ -34,7 +34,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}button{fon
 .hero-photo{position:absolute;z-index:-2;inset:0 0 0 auto;width:65.5%;overflow:hidden}
 .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 45%}
 .hero-overlay{position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,#0b2032 0%,#0b2032 29%,#0b2032f0 38%,#0b2032ad 49%,#0b20322c 68%,#0b203203 100%),linear-gradient(0deg,#07192933,#07192900 50%)}
-.hero-layout{display:flex;align-items:center;min-height:442px;padding-top:6px;padding-bottom:38px}
+.hero-layout{display:flex;align-items:center;min-height:442px;padding-top:38px;padding-bottom:38px}
 .hero-copy{width:min(690px,67%);padding-bottom:3px;position:relative}
 .eyebrow{font-size:10px;font-weight:700;letter-spacing:.23em;line-height:1.5;margin-bottom:17px}
 .gold-ink{color:var(--gold)}.section-eyebrow{color:#9c793e;display:flex;align-items:center;gap:15px;letter-spacing:.18em}.section-eyebrow::after{content:"";width:45px;height:1px;background:#d5b676}
