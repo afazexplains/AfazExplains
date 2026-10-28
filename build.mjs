@@ -82,9 +82,8 @@ const highlightsMarkup = (content.highlights || []).map(item => `
 const aboutPoints = [content.about.point_one,content.about.point_two,content.about.point_three]
   .filter(Boolean).map(point => `<li>${icon('check')} <span>${esc(point)}</span></li>`).join('');
 
-const bookingCta = hasBooking
-  ? `<a class="button button-gold" href="${hrefForBooking}"${externalProps}>${str(content.hero,'primary_button')}${icon('arrow')}</a>`
-  : `<a class="button button-gold" href="#contact">${str(content.hero,'primary_button')}${icon('arrow')}</a>`;
+const offerPrice = String(content.hero?.offer_price ?? '').trim().replace(/^From\b/i, 'from');
+const bookingCta = `<a class="button button-gold" href="#services">${str(content.hero,'primary_button')}${icon('arrow')}</a>`;
 const bookingButtonSmall = `<a class="button button-gold button-small" href="${hrefForBooking}"${externalProps}>${str(content.contact,'primary_button')}${icon('arrow')}</a>`;
 const activeContactLinks = `${hasBooking ? bookingButtonSmall : ''}${hasEmail ? `<a class="button button-outline-dark button-small" href="${emailHref}">${icon('mail')}${str(content.contact,'email_button')}</a>` : ''}${hasPhone ? `<a class="phone-link" href="${phoneHref}">${esc(phone)}</a>` : ''}`;
 const contactMarkup = activeContactLinks || `<p class="contact-notice">Online enquiries are being set up. Please check back soon.</p>`;
@@ -133,10 +132,9 @@ const html = `<!doctype html>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="container hero-layout"><div class="hero-copy">
       ${String(content.hero?.eyebrow ?? '').trim() ? `<p class="eyebrow gold-ink">${str(content.hero,'eyebrow')}</p>` : ''}
-      <h1 id="hero-title">${str(content.hero,'line_one')}<br>${str(content.hero,'line_two')}<br><span>${str(content.hero,'line_three')}</span></h1>
-      <div class="hero-offer"><p class="hero-offer-price">${str(content.hero,'offer_price')}</p><p class="hero-offer-duration">${str(content.hero,'offer_session_length')}</p></div>
-      <div class="hero-actions">${bookingCta}<a class="text-link light-link" href="#services">${str(content.hero,'secondary_button')} ${icon('arrowdiag')}</a></div>
-      <div class="hero-bottom-line"><span class="gold-dot"></span> EXPLAINED CLEARLY. HANDLED CONFIDENTLY.</div>
+      <h1 id="hero-title">${str(content.hero,'line_one')}<br>${str(content.hero,'line_two')}</h1>
+      <p class="hero-offer">Workplace consultations ${esc(offerPrice)} <span aria-hidden="true">·</span> ${str(content.hero,'offer_session_length')}</p>
+      <div class="hero-actions">${bookingCta}</div>
     </div></div>
   </section>
 </div>
